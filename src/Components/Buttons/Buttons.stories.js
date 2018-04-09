@@ -35,7 +35,7 @@ storiesOf('Components/Buttons', module)
 
   ### Notes
 
-  These are all the color varieties for the default button size. You can import a generic Button and supply a _type_ or you can import the sugared versions of the Buttons.
+  These are all the color varieties for the default button size. You can import a generic Button and supply a _type_ or you can import the sugared versions of the Buttons. Try tabbing over them to see the focus transition.
 
   ### Usage
 
