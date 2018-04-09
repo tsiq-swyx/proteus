@@ -1,4 +1,4 @@
-.Button span {
+.Prototype span {
   margin: auto;
   font-size: 16px;
   font-weight: bold;
@@ -6,7 +6,7 @@
   color: #fff;
   text-transform: uppercase;
 }
-.Button {
+.Prototype {
   padding: 0px 20px;
   height: 49px;
   border-radius: 2px;
@@ -15,10 +15,10 @@
   background-color: var(--ui-bkgd, #3d5567);
 }
 
-.Button:hover:not(.Button_disabled) {
+.Prototype:hover:not(.Prototype_disabled) {
   cursor: pointer;
 }
 
-.Button_disabled {
+.Prototype_disabled {
   --ui-bkgd: rgba(61, 85, 103, 0.3);
 }

@@ -1,0 +1,74 @@
+button {
+  /* display: inline-block; */
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+}
+
+.Button:focus {
+  box-shadow: 0 0 0px 2px white, 0 0 0px 4px var(--focus);
+  outline: none;
+}
+.Button-disabled {
+  cursor: not-allowed;
+  filter: opacity(40%);
+}
+.Button-disabled * {
+  pointer-events: none;
+}
+
+.Button-default {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 3px;
+}
+.Button-small {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+.Button-large {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 3px;
+}
+.Button-primary {
+  background-color: var(--brand);
+  color: var(--text-white);
+  --focus: var(--brand);
+}
+.Button-success {
+  background-color: var(--success);
+  color: var(--text-white);
+  --focus: var(--success);
+}
+.Button-destructive {
+  background-color: var(--danger);
+  color: var(--text-white);
+  --focus: var(--danger);
+}
+.Button-subdued {
+  background-color: var(--ui-1);
+  color: var(--text-subtle);
+  --focus: var(--text-subtle);
+}
+.Button-ghost {
+  background-color: var(--ui-0);
+  color: var(--text-subtle);
+  --focus: var(--text-subtle);
+}

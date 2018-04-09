@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Button.css';
+import './Prototype.css';
 export interface Props {
   /** this dictates what the button will say  */
   label: string;
@@ -13,12 +13,12 @@ export interface Props {
   disabled?: boolean;
 }
 const noop = () => {}; // tslint:disable-line
-export const Button = (props: Props) => {
+export const Prototype = (props: Props) => {
   const { label, onClick, disabled = false } = props;
-  const disabledclass = disabled ? 'Button_disabled' : '';
+  const disabledclass = disabled ? 'Prototype_disabled' : '';
   return (
     <div
-      className={`Button ${disabledclass}`}
+      className={`Prototype ${disabledclass}`}
       onClick={!disabled ? onClick : noop}
     >
       <span>{label}</span>

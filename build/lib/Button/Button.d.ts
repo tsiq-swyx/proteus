@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import './Button.css';
+import 'Button/Button.css';
 export interface Props {
     /** this dictates what the button will say  */
     label: string;

@@ -1,21 +1,21 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { Button } from './Button';
+import { Prototype } from './Prototype';
 import { wInfo } from '../../utils';
 import { text, boolean } from '@storybook/addon-knobs/react';
 
-storiesOf('Components/Button', module).addWithJSX(
-  'basic Button',
+storiesOf('Components/Prototype', module).addWithJSX(
+  'basic Prototype',
   wInfo(`
 
   ### Notes
 
-  This is a button
+  This is a Prototype
 
   ### Usage
   ~~~js
-  <Button
+  <Prototype
     label={'Enroll'}
     disabled={false}
     onClick={() => alert('hello there')}
@@ -23,7 +23,7 @@ storiesOf('Components/Button', module).addWithJSX(
   ~~~
 
 `)(() => (
-    <Button
+    <Prototype
       label={text('label', 'Enroll')}
       disabled={boolean('disabled', false)}
       onClick={() => alert('hello there')}
