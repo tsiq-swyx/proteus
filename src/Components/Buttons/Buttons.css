@@ -1,74 +1,75 @@
 button {
-  /* display: inline-block; */
+  text-decoration: none;
   border: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  overflow: visible;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  line-height: normal;
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
+  outline: none;
+  transition: background 250ms ease;
+}
+
+.Button:hover {
+  cursor: pointer;
+  background: var(--hover);
+  transition: background 250ms ease;
 }
 
 .Button:focus {
   box-shadow: 0 0 0px 2px white, 0 0 0px 4px var(--focus);
-  outline: none;
+  background: var(--focus);
 }
+
+.Button:active {
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.4);
+  background: var(--active);
+}
+
 .Button-disabled {
-  cursor: not-allowed;
-  filter: opacity(40%);
-}
-.Button-disabled * {
+  opacity: 0.4;
   pointer-events: none;
 }
 
 .Button-default {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 500;
   padding: 8px 16px;
   border-radius: 3px;
 }
 .Button-small {
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 500;
   padding: 4px 8px;
   border-radius: 2px;
 }
 .Button-large {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
   padding: 8px 16px;
   border-radius: 3px;
 }
 .Button-primary {
   background-color: var(--brand);
   color: var(--text-white);
-  --focus: var(--brand);
+  --hover: var(--brand-1);
+  --focus: var(--brand-1);
+  --active: var(--brand-1);
 }
 .Button-success {
   background-color: var(--success);
   color: var(--text-white);
-  --focus: var(--success);
+  --hover: var(--success-1);
+  --focus: var(--success-1);
+  --active: var(--success-1);
 }
 .Button-destructive {
   background-color: var(--danger);
   color: var(--text-white);
-  --focus: var(--danger);
+  --hover: var(--danger-1);
+  --focus: var(--danger-1);
+  --active: var(--danger-1)
 }
 .Button-subdued {
   background-color: var(--ui-1);
   color: var(--text-subtle);
-  --focus: var(--text-subtle);
+  --hover: var(--ui-2);
+  --focus: var(--ui-2);
+  --active: var(--ui-2);
 }
 .Button-ghost {
   background-color: var(--ui-0);
   color: var(--text-subtle);
-  --focus: var(--text-subtle);
+  --hover: var(--ui-2);
+  --focus: var(--ui-0);
+  --active: var(--ui-2);
 }

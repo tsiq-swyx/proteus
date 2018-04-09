@@ -55,16 +55,16 @@ small {
 button {
   font-size: 14px;
   line-height: 20px;
-  font-weight: bold;
+  font-weight: 500;
 }
 button.Button-large {
   font-size: 16px;
   line-height: 24px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 button.Button-small {
   font-size: 12px;
   line-height: 16px;
-  font-weight: bold;
+  font-weight: 500;
 }
