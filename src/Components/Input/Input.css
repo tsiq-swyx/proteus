@@ -1,0 +1,61 @@
+.Input .InputLabel {
+  font-size: 14px;
+  font-weight: bold;
+  color: #494949;
+  display: block;
+}
+.Input .InputSubtitle {
+  font-size: 12px;
+  font-weight: normal;
+  color: #494949;
+  display: block;
+  margin-top: 8px;
+}
+
+.Input input {
+  border: none;
+  height: 36px;
+  border-radius: 3px;
+  padding-left: 8px;
+  background-color: var(--ui-1);
+  font-family: HelveticaNeue;
+  font-size: 14px;
+}
+
+.Input input::placeholder {
+  font-size: 14px;
+  color: #afafaf;
+  display: flex;
+  align-items: center;
+}
+
+/* disabled */
+.Input.Input-disabled {
+  background-color: var(--ui-1);
+  opacity: 0.3;
+}
+.Input.Input-disabled input {
+  color: var(--text-default);
+  /* opacity: 0.3; */
+}
+
+/* hover */
+.Input input:hover {
+  background-color: var(--ui-2);
+}
+.Input input::placeholder:hover {
+  background-color: var(--ui-2);
+}
+
+/* colorstyle */
+.Input.Input-border input {
+  background-color: transparent;
+  border: solid 2px var(--input-color);
+}
+.Input.Input-full input {
+  color: var(--input-color-dark);
+  background-color: var(--input-color-light);
+}
+.Input.Input-full > .InputSubtitle {
+  color: var(--input-color-dark);
+}

@@ -5,7 +5,14 @@ import { wInfo } from '../../../utils';
 
 import '../../Colors/Colors.css';
 
-import { Button } from './Buttons';
+import {
+  Button,
+  PrimaryButton,
+  SuccessButton,
+  DestructiveButton,
+  SubduedButton,
+  GhostButton
+} from './Buttons';
 
 const Section = props => (
   <div
@@ -28,33 +35,48 @@ storiesOf('Components/Buttons', module)
 
   ### Notes
 
-  These are all the color varieties for the default button size
+  These are all the color varieties for the default button size. You can import a generic Button and supply a _type_ or you can import the sugared versions of the Buttons.
 
   ### Usage
 
   ~~~
+  import {
+    Button,
+    PrimaryButton,
+    SuccessButton,
+    DestructiveButton,
+    SubduedButton,
+    GhostButton
+  } from './Buttons';
+  ~~~
+
+
+  ~~~
+  // either
   <Button label="Action" type={{ type: 'success' }} />
   <Button label="Action" type={{ type: 'subdued' }} />
   <Button label="Action" type={{ type: 'ghost' }} />
   <Button label="Action" type={{ type: 'destructive' }} />
   <Button label="Action" />
+
+  // or
+  <SuccessButton label="Action" onClick={() => alert('Success')} />
+  <SubduedButton label="Action" onClick={() => alert('Subdued')} />
+  <GhostButton label="Action" onClick={() => alert('Ghost')} />
+  <DestructiveButton label="Action" onClick={() => alert('Destructive')} />
+  <PrimaryButton label="Action" onClick={() => alert('Primary')} />
   ~~~
 
 `)(() => (
       <Section>
-        <Button
+        <SuccessButton label="Action" onClick={() => alert('Success')} />
+        <SubduedButton label="Action" onClick={() => alert('Subdued')} />
+        <GhostButton label="Action" onClick={() => alert('Ghost')} />
+        <DestructiveButton
           label="Action"
-          type={{ type: 'success' }}
-          onClick={() => alert('hi')}
+          onClick={() => alert('Destructive')}
         />
-        <Button
-          label="Action"
-          type={{ type: 'subdued' }}
-          onClick={() => alert('subdued')}
-        />
-        <Button label="Action" type={{ type: 'ghost' }} />
-        <Button label="Action" type={{ type: 'destructive' }} />
-        <Button label="Action" />
+        <PrimaryButton label="Action" onClick={() => alert('Primary')} />
       </Section>
     ))
   )

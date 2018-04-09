@@ -59,3 +59,34 @@ export const Button = (props: Props) => {
     </button>
   );
 };
+
+export const PrimaryButton = (props: Props) => (
+  <Button
+    type={{ type: ButtonTypes.primary, size: ButtonSizes.default }}
+    {...props}
+  />
+);
+export const SuccessButton = (props: Props) => (
+  <Button
+    type={{ type: ButtonTypes.success, size: ButtonSizes.default }}
+    {...props}
+  />
+);
+export const DestructiveButton = (props: Props) => (
+  <Button
+    type={{ type: ButtonTypes.destructive, size: ButtonSizes.default }}
+    {...props}
+  />
+);
+export const SubduedButton = (props: Props) => (
+  <Button
+    type={{ type: ButtonTypes.subdued, size: ButtonSizes.default }}
+    {...props}
+  />
+);
+export const GhostButton = (props: Props) => (
+  <Button
+    type={{ type: ButtonTypes.ghost, size: ButtonSizes.default }}
+    {...props}
+  />
+);
