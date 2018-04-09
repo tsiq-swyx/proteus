@@ -42,8 +42,16 @@ storiesOf('Components/Buttons', module)
 
 `)(() => (
       <Section>
-        <Button label="Action" type={{ type: 'success' }} />
-        <Button label="Action" type={{ type: 'subdued' }} />
+        <Button
+          label="Action"
+          type={{ type: 'success' }}
+          onClick={() => alert('hi')}
+        />
+        <Button
+          label="Action"
+          type={{ type: 'subdued' }}
+          onClick={() => alert('subdued')}
+        />
         <Button label="Action" type={{ type: 'ghost' }} />
         <Button label="Action" type={{ type: 'destructive' }} />
         <Button label="Action" />
