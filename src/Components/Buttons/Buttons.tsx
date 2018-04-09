@@ -53,7 +53,7 @@ export const Button = (props: Props) => {
   return (
     <button
       className={`Button Button-${size} Button-${type} ${disabledclass}`}
-      onClick={!disabled ? onClick : noop}
+      onClick={!disabled ? onClick : noop} aria-disabled={disabled}
     >
       {label}
     </button>
