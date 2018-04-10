@@ -13,13 +13,16 @@
 }
 
 .Input input {
-  border: none;
+  border: solid var(--pt2) transparent;
   height: var(--pt36);
   border-radius: var(--pt3);
   padding-left: var(--pt8);
   background-color: var(--ui-1);
   font-family: HelveticaNeue;
   font-size: var(--pt14);
+  outline: none;
+  transition: background-color 250ms ease;
+  background-color: var(--input-color-light);
 }
 
 .Input input::placeholder {
@@ -48,14 +51,15 @@
 }
 
 /* colorstyle */
-.Input.Input-border input {
+.Input input:focus {
   background-color: transparent;
   border: solid var(--pt2) var(--input-color);
+  color: var(--input-color-dark);
 }
-.Input.Input-full input {
+/* .Input input:focus:active {
   color: var(--input-color-dark);
   background-color: var(--input-color-light);
-}
-.Input.Input-full > .InputSubtitle {
+} */
+.Input input:not(:focus) + .InputSubtitle {
   color: var(--input-color-dark);
 }
