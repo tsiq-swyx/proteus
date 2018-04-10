@@ -1,25 +1,40 @@
+.Checkbox {
+  display: flex;
+}
 .Checkbox_label input {
   display: none;
 }
 
 .Checkbox_label span {
-  margin-top: var(--pt3);
+  /* margin-top: var(--pt3); */
   margin-right: var(--pt10);
   display: block;
-  width: var(--pt32);
-  height: var(--pt32);
+  width: var(--pt14);
+  height: var(--pt14);
   border-radius: var(--pt2);
-  border: solid var(--pt2) #c2c2c2;
+  border: solid var(--pt2) var(--ui-3);
 }
 
 .Checkbox_label input:checked + span {
   display: block;
-  width: var(--pt32);
-  height: var(--pt32);
+  width: var(--pt14);
+  height: var(--pt14);
   border-radius: var(--pt2);
-  background-color: #3d5567;
-  border: none;
+  background-color: var(--brand-default);
+  border: solid var(--pt2) var(--brand-dark);
   background-image: url('./Check.svg');
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.Checkbox_label.CheckStatus_mixed input:checked + span {
+  display: block;
+  width: var(--pt14);
+  height: var(--pt14);
+  border-radius: var(--pt2);
+  background-color: var(--text-0);
+  border: solid var(--pt2) var(--brand-dark);
+  /* background-image: url('./Check.svg');
+  background-repeat: no-repeat;
+  background-position: center; */
 }

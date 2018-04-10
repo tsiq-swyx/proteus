@@ -1,14 +1,20 @@
 import * as React from 'react';
 import './Checkbox.css';
+
+export enum CheckStatus {
+  unchecked = 'unchecked',
+  checked = 'checked',
+  mixed = 'mixed'
+}
 export interface Props {
-  /** the state of the checkbox, true or false  */
-  isChecked: boolean;
+  /** the state of the checkbox, checked unchecked or mixed */
+  checkStatus: CheckStatus;
   /** this dictates what the button will say  */
   label: string;
   /** this dictates what the button will do  */
-  onClick: () => void;
+  onChange: () => void;
   /**
-   * Disables onclick
+   * Disables onChange
    *
    * @default false
    **/
@@ -16,15 +22,21 @@ export interface Props {
 }
 const noop = () => {}; // tslint:disable-line
 export const Checkbox = (props: Props) => {
-  const { label, onClick, isChecked, disabled = false } = props;
+  const { label, onChange, checkStatus, disabled = false } = props;
   const disabledclass = disabled ? 'Checkbox_disabled' : '';
+  const checkedclass = {
+    [CheckStatus.unchecked]: null,
+    [CheckStatus.checked]: 'CheckStatus_checked',
+    [CheckStatus.mixed]: 'CheckStatus_mixed'
+  }[checkStatus];
   return (
-    <div
-      className={`Checkbox ${disabledclass}`}
-      onClick={!disabled ? onClick : noop}
-    >
-      <label className="Checkbox_label">
-        <input type="checkbox" checked={isChecked} />
+    <div className={`Checkbox ${disabledclass}`}>
+      <label className={`Checkbox_label ${checkedclass}`}>
+        <input
+          type="checkbox"
+          checked={!!checkedclass}
+          onChange={!disabled ? onChange : noop}
+        />
         <span />
       </label>
       <span>{label}</span>

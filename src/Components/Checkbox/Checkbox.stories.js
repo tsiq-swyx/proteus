@@ -5,6 +5,27 @@ import { Checkbox } from './Checkbox';
 import { wInfo } from '../../../utils';
 import { text, boolean } from '@storybook/addon-knobs/react';
 
+const states = ['unchecked', 'checked', 'mixed'];
+class TestCheckbox extends React.Component {
+  state = { stateindex: 0 };
+  handleChange = () => {
+    // alert('button was clicked');
+    this.setState(prevState => ({
+      stateindex: prevState.stateindex === 2 ? 0 : prevState.stateindex + 1
+    }));
+  };
+  render() {
+    const { stateindex } = this.state;
+    return (
+      <Checkbox
+        checkStatus={states[stateindex]}
+        onChange={this.handleChange}
+        {...this.props}
+      />
+    );
+  }
+}
+
 storiesOf('Components/Checkbox', module).addWithJSX(
   'basic Checkbox',
   wInfo(`
@@ -15,18 +36,9 @@ storiesOf('Components/Checkbox', module).addWithJSX(
 
   ### Usage
   ~~~js
-  <Checkbox
-    label={'Enroll'}
-    disabled={false}
-    onClick={() => alert('hello there')}
+  <TestCheckbox
   />
   ~~~
 
-`)(() => (
-    <Checkbox
-      label={text('label', 'Enroll')}
-      disabled={boolean('disabled', false)}
-      onClick={() => alert('hello there')}
-    />
-  ))
+`)(() => <TestCheckbox label="Enroll" />)
 );
