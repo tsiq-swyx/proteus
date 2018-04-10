@@ -3,8 +3,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { wInfo } from '../../../utils';
 
-import '../../Colors/Colors.css';
-
 import {
   Button,
   PrimaryButton,
@@ -12,7 +10,7 @@ import {
   DestructiveButton,
   SubduedButton,
   GhostButton
-} from './Buttons';
+} from './Button';
 
 const Section = props => (
   <div
@@ -28,7 +26,7 @@ const Section = props => (
   </div>
 );
 
-storiesOf('Components/Buttons', module)
+storiesOf('Components/Button', module)
   .addWithJSX(
     'default size',
     wInfo(`

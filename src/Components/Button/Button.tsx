@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Buttons.css';
+import './Button.css';
 
 export enum ButtonSizes {
   default = 'default',

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="16px" viewBox="0 0 18 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>tick-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Add-bank-details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-200.000000, -719.000000)">
+        <path d="M214.993509,720.084389 C215.499187,719.428202 216.441064,719.30619 217.097251,719.811868 C217.753438,720.317546 217.87545,721.259424 217.369772,721.915611 L208.040367,734.021807 C207.487643,734.739043 206.430271,734.806749 205.790584,734.165864 L200.907746,729.273885 C200.322508,728.687551 200.323396,727.737804 200.90973,727.152566 C201.496064,726.567327 202.445811,726.568215 203.031049,727.154549 L206.706957,730.837339 L214.993509,720.084389 Z" id="tick-icon" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
+</svg>

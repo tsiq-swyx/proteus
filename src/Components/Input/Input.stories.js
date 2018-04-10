@@ -21,7 +21,7 @@ const Section = props => (
   </div>
 );
 
-storiesOf('Components/Inputs', module)
+storiesOf('Components/Input', module)
   .addWithJSX(
     'black and white inputs',
     wInfo(`

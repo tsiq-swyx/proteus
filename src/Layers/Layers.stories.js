@@ -3,8 +3,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { wInfo } from '../../utils';
 
-import './Layers.css';
-
 // const Section = props => (
 //   <div style={{ marginTop: 10, marginBottom: 30 }}>{props.children}</div>
 // );

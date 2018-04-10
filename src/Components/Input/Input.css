@@ -1,29 +1,29 @@
 .Input .InputLabel {
-  font-size: 14px;
+  font-size: var(--pt14);
   font-weight: bold;
   color: #494949;
   display: block;
 }
 .Input .InputSubtitle {
-  font-size: 12px;
+  font-size: var(--pt12);
   font-weight: normal;
   color: #494949;
   display: block;
-  margin-top: 8px;
+  margin-top: var(--pt8);
 }
 
 .Input input {
   border: none;
-  height: 36px;
-  border-radius: 3px;
-  padding-left: 8px;
+  height: var(--pt36);
+  border-radius: var(--pt3);
+  padding-left: var(--pt8);
   background-color: var(--ui-1);
   font-family: HelveticaNeue;
-  font-size: 14px;
+  font-size: var(--pt14);
 }
 
 .Input input::placeholder {
-  font-size: 14px;
+  font-size: var(--pt14);
   color: #afafaf;
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@
 /* colorstyle */
 .Input.Input-border input {
   background-color: transparent;
-  border: solid 2px var(--input-color);
+  border: solid var(--pt2) var(--input-color);
 }
 .Input.Input-full input {
   color: var(--input-color-dark);

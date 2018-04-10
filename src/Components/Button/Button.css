@@ -12,12 +12,12 @@ button {
 }
 
 .Button:focus:not(.Button-disabled) {
-  box-shadow: 0 0 0px 2px white, 0 0 0px 4px var(--focus);
+  box-shadow: 0 0 0px var(--pt2) white, 0 0 0px var(--pt4) var(--focus);
   background: var(--focus);
 }
 
 .Button:active {
-  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 var(--pt12) rgba(0, 0, 0, 0.4);
   background: var(--active);
 }
 
@@ -30,16 +30,16 @@ button {
 }
 
 .Button-default {
-  padding: 8px 16px;
-  border-radius: 3px;
+  padding: var(--pt8) var(--pt16);
+  border-radius: var(--pt3);
 }
 .Button-small {
-  padding: 4px 8px;
-  border-radius: 2px;
+  padding: var(--pt4) var(--pt8);
+  border-radius: var(--pt2);
 }
 .Button-large {
-  padding: 8px 16px;
-  border-radius: 3px;
+  padding: var(--pt8) var(--pt16);
+  border-radius: var(--pt3);
 }
 .Button-primary {
   background-color: var(--brand);

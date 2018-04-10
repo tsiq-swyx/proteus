@@ -5,8 +5,6 @@ import { wInfo } from '../../utils';
 // import { Button } from './Button';
 // import { text, boolean } from '@storybook/addon-knobs/react';
 
-import './Colors.css';
-
 const Section = props => (
   <div style={{ marginTop: 10, marginBottom: 30 }}>{props.children}</div>
 );

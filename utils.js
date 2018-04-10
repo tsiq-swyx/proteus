@@ -21,5 +21,10 @@ const wInfoStyle = {
     lineHeight: '2'
   }
 };
+
+import './src/Typography/Typography.css';
+import './src/Layers/Layers.css';
+import './src/Colors/Colors.css';
+
 export const wInfo = text =>
   withInfo({ inline: true, source: false, styles: wInfoStyle, text: text });
