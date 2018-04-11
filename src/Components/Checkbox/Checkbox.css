@@ -38,3 +38,14 @@
   background-repeat: no-repeat;
   background-position: center; */
 }
+
+/* disabled */
+.Checkbox.Checkbox_disabled {
+  /* border: solid var(--pt2) var(--ui-1); */
+  opacity: 0.3;
+}
+.Checkbox.Checkbox_disabled input {
+  /* color: var(--text-default); */
+  border: solid var(--pt2) var(--ui-1);
+  /* opacity: 0.3; */
+}

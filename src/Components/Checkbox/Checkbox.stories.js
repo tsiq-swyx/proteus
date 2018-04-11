@@ -20,6 +20,7 @@ class TestCheckbox extends React.Component {
       <Checkbox
         checkStatus={states[stateindex]}
         onChange={this.handleChange}
+        disabled={this.props.disabled}
         {...this.props}
       />
     );
@@ -40,5 +41,5 @@ storiesOf('Components/Checkbox', module).addWithJSX(
   />
   ~~~
 
-`)(() => <TestCheckbox label="Enroll" />)
+`)(() => <TestCheckbox label="Enroll" disabled={boolean('disabled', false)} />)
 );
