@@ -44,29 +44,3 @@
   background-color: var(--ui-1);
   opacity: 0.3;
 }
-/* .Radio_disabled input {
-  color: var(--text-default);
-  opacity: 0.3;
-} */
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-/* .Radio_checkmark:after {
-  content: '';
-  position: absolute;
-  display: none;
-} */
-
-/* Show the indicator (dot/circle) when checked */
-/* .Radio_container input:checked ~ .checkmark:after {
-  display: block;
-} */
-
-/* Style the indicator (dot/circle) */
-/* .Radio_container .Radio_checkmark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
-} */

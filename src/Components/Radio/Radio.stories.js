@@ -11,12 +11,15 @@ class TestRadio extends React.Component {
   render() {
     const { choices, onChange, disabled } = this.props;
     return (
-      <Radio
-        choices={choices}
-        value={this.state.value}
-        onChange={this.onChange}
-        disabled={disabled}
-      />
+      <div>
+        Selected value: {this.state.value}
+        <Radio
+          choices={choices}
+          value={this.state.value}
+          onChange={this.onChange}
+          disabled={disabled}
+        />
+      </div>
     );
   }
 }
@@ -33,28 +36,32 @@ storiesOf('Components/Radio', module).addWithJSX(
   ### Usage
   ~~~js
   <Radio
-    label={'Enroll'}
-    disabled={false}
-    onClick={() => alert('hello there')}
+    choices={choices}
+    value={choices[0]}
+    onChange={() => alert('hi')}
   />
   ~~~
 
 `)(() => {
     return (
       <div style={{ display: 'flex' }}>
-        <h3>basic </h3>
-        <Radio
-          choices={choices}
-          value={choices[0]}
-          onChange={() => alert('hi')}
-        />
+        <div>
+          <h3>basic </h3>
+          <Radio
+            choices={choices}
+            value={choices[0]}
+            onChange={() => alert('hi')}
+          />
+        </div>
         <div style={{ width: 100 }} />
-        <h3>working </h3>
-        <TestRadio
-          choices={choices}
-          initialValue={choices[0]}
-          disabled={boolean('disabled', false)}
-        />
+        <div>
+          <h3>working </h3>
+          <TestRadio
+            choices={choices}
+            initialValue={choices[0]}
+            disabled={boolean('disabled', false)}
+          />
+        </div>
       </div>
     );
   })
